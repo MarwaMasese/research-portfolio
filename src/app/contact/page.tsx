@@ -142,22 +142,22 @@ export default function Alternate() {
         </section>
 
         {/* Call to Action */}
-        <section className="text-center bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg p-8">
-          <h2 className="text-2xl font-light mb-4">Ready to Collaborate?</h2>
-          <p className="text-lg mb-6 opacity-90">
+        <section className="text-center bg-gray-900 rounded-lg p-8">
+          <h2 className="text-2xl font-light mb-4" style={{color: '#ffffff'}}>Ready to Collaborate?</h2>
+          <p className="text-lg mb-6" style={{color: '#ffffff'}}>
             Whether you're looking to discuss research opportunities, explore potential collaborations, 
             or simply connect about AI and its impact, I'd love to hear from you.
           </p>
           <div className="space-x-4">
             <a 
-              href="mailto:cornelius@vociply.com" 
-              className="inline-block bg-white text-blue-600 px-6 py-3 rounded-lg hover:bg-gray-100 transition-colors font-medium"
+              href="mailto:maroa@vociply.com" 
+              className="inline-block bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-600 transition-colors font-medium"
             >
               Send Email
             </a>
             <a 
               href="/" 
-              className="inline-block border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-600 transition-colors font-medium"
+              className="inline-block border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-800 transition-colors font-medium"
             >
               Back to Portfolio
             </a>

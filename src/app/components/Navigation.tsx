@@ -11,7 +11,7 @@ const Navigation = () => {
     { name: 'Updates', href: '/updates' },
     { name: 'Research', href: '/research' },
     { name: 'Teaching & Talks', href: '/teaching' },
-    { name: 'Alternate Website', href: '/alternate', className: 'text-purple-500' }
+    { name: 'Contact', href: '/contact', className: 'text-blue-600' }
   ];
 
   return (

@@ -23,16 +23,16 @@ export default function Home() {
                 <p className="text-gray-600 text-sm">AI Researcher & CTO</p>
                 <div className="space-y-1 text-sm text-gray-500">
                   <p>Vociply LTD</p>
-                  <p>cornelius@vociply.com</p>
+                  <p>maroa@vociply.com</p>
                 </div>
                 <div className="flex justify-center space-x-3 pt-4">
-                  <a href="https://linkedin.com/in/cornelius-maroa" className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1">
+                  <a href="https://www.linkedin.com/in/marwamasese/" className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1">
                     <FaLinkedin /> LinkedIn
                   </a>
-                  <a href="https://github.com/cornelius-maroa" className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1">
+                  <a href="https://github.com/MarwaMasese" className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1">
                     <FaGithub /> GitHub
                   </a>
-                  <a href="mailto:cornelius@vociply.com" className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1">
+                  <a href="mailto:maroa@vociply.com" className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1">
                     <FaEnvelope /> Email
                   </a>
                 </div>
