@@ -1,103 +1,126 @@
-import Image from "next/image";
-
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-white">
+      <div className="max-w-6xl mx-auto px-6 py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
+          {/* Profile Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-8">
+              <div className="w-48 h-48 mx-auto bg-gray-200 rounded-full mb-6 flex items-center justify-center overflow-hidden">
+                <div className="text-gray-500 text-center">
+                  <div className="text-4xl mb-2">👨‍�</div>
+                  <div className="text-sm">Profile Photo</div>
+                </div>
+              </div>
+              <div className="text-center space-y-4">
+                <h1 className="text-2xl font-light text-gray-900">Cornelius Maroa</h1>
+                <p className="text-gray-600 text-sm">AI Researcher & CTO</p>
+                <div className="space-y-1 text-sm text-gray-500">
+                  <p>Vociply LTD</p>
+                  <p>cornelius@vociply.com</p>
+                </div>
+                <div className="flex justify-center space-x-3 pt-4">
+                  <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">LinkedIn</a>
+                  <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">GitHub</a>
+                  <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">Scholar</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Main Content */}
+          <div className="lg:col-span-3 space-y-16">
+            {/* About Section */}
+            <section>
+              <h2 className="text-3xl font-light text-gray-900 mb-8 border-b border-gray-200 pb-3">About Me</h2>
+              <div className="prose prose-lg text-gray-700 leading-relaxed max-w-none">
+                <p className="mb-6 text-lg">
+                  I'm an aspiring AI researcher passionate about advancing <strong>Audio AI</strong> and{' '}
+                  <strong>Conversational Systems</strong> with a focus on multilingual applications and edge deployment. 
+                  With 5 years of industry experience bridging research and production, I'm dedicated to developing 
+                  AI technologies that create meaningful impact, particularly for underserved communities and 
+                  low-resource languages.
+                </p>
+                <p className="text-lg">
+                  Currently serving as CTO at Vociply, I lead research initiatives in real-time voice processing 
+                  systems while pursuing independent research in neural network optimization and multilingual AI architectures.
+                </p>
+              </div>
+            </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            {/* Research Focus Areas */}
+            <section>
+              <h2 className="text-3xl font-light text-gray-900 mb-8 border-b border-gray-200 pb-3">Research Focus Areas</h2>
+              <div className="space-y-10">
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center">
+                    <span className="text-2xl mr-3">🎵</span> Audio AI Models
+                  </h3>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    Developing deep learning architectures that understand and generate human speech across multiple 
+                    languages, with particular emphasis on African languages and low-resource scenarios.
+                  </p>
+                  <div className="ml-8">
+                    <p className="font-medium text-gray-800 mb-3">Current Research:</p>
+                    <ul className="list-disc list-inside text-gray-600 space-y-2">
+                      <li>Multilingual voice processing pipelines</li>
+                      <li>Speech synthesis for underrepresented languages</li>
+                      <li>Real-time audio-to-audio transformation systems</li>
+                      <li>Data augmentation techniques for speech data scarcity</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center">
+                    <span className="text-2xl mr-3">🤖</span> Conversational AI
+                  </h3>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    Exploring the intersection of large language models and voice interfaces to create more natural, 
+                    efficient human-AI interactions.
+                  </p>
+                  <div className="ml-8">
+                    <p className="font-medium text-gray-800 mb-3">Current Research:</p>
+                    <ul className="list-disc list-inside text-gray-600 space-y-2">
+                      <li>Voice-to-voice agentic systems</li>
+                      <li>LLM optimization for conversational applications</li>
+                      <li>Prompt engineering for multilingual contexts</li>
+                      <li>Real-time response generation architectures</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 p-6 rounded-lg">
+                  <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center">
+                    <span className="text-2xl mr-3">⚡</span> Edge AI Optimization
+                  </h3>
+                  <p className="text-gray-700 mb-4 leading-relaxed">
+                    Researching efficient neural network architectures that bring advanced AI capabilities to 
+                    resource-constrained environments.
+                  </p>
+                  <div className="ml-8">
+                    <p className="font-medium text-gray-800 mb-3">Current Research:</p>
+                    <ul className="list-disc list-inside text-gray-600 space-y-2">
+                      <li>Hypernetwork optimization techniques</li>
+                      <li>Ternary neural network architectures</li>
+                      <li>Model compression for edge deployment</li>
+                      <li>Democratization of AI technology access</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+
+            {/* Quote Section */}
+            <section className="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-200">
+              <blockquote className="text-lg italic text-gray-700 text-center">
+                "Building bridges between cutting-edge AI research and meaningful real-world applications, 
+                with a commitment to democratizing access to advanced AI technologies."
+              </blockquote>
+            </section>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
