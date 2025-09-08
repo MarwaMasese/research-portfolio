@@ -1,3 +1,5 @@
+import { FaFlask, FaHandshake, FaEnvelope, FaEye } from 'react-icons/fa'
+
 export default function Teaching() {
   const mentorshipPrograms = [
     {
@@ -148,35 +150,97 @@ export default function Teaching() {
         </section>
 
         {/* Contact & Connect */}
-        <section className="bg-gradient-to-r from-blue-50 to-gray-50 rounded-lg p-8 text-center">
-          <h2 className="text-2xl font-light text-gray-900 mb-6">Let's Connect</h2>
-          <p className="text-lg text-gray-700 mb-6 max-w-3xl mx-auto">
-            I'm always excited to discuss research opportunities, collaborations, and the future of AI technology. 
-            Whether you're interested in multilingual AI systems, edge deployment optimization, or the intersection 
-            of research and real-world impact, I'd love to connect.
-          </p>
-          
-          <div className="grid md:grid-cols-2 gap-6 mt-8">
-            <div>
-              <h3 className="font-medium text-gray-900 mb-3">Research Interests for Collaboration:</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Audio AI and speech processing research</li>
-                <li>• Conversational AI system architectures</li>
-                <li>• Edge AI optimization and democratization</li>
-                <li>• Multilingual AI for underrepresented languages</li>
-                <li>• Ethical AI development and deployment</li>
-              </ul>
+        <section className="bg-gray-50 rounded-lg p-10 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-light text-gray-900 mb-4">Let's Connect</h2>
+            <div className="w-24 h-1 bg-gray-300 mx-auto mb-6 rounded-full"></div>
+            
+            <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
+              I'm always excited to discuss research opportunities, collaborations, and the future of AI technology. 
+              Whether you're interested in <span className="font-medium text-gray-800">multilingual AI systems</span>, 
+              <span className="font-medium text-gray-800"> edge deployment optimization</span>, or the intersection 
+              of research and real-world impact, I'd love to connect.
+            </p>
+            
+            <div className="grid md:grid-cols-2 gap-8 mt-10">
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:shadow-md transition-all duration-300">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center">
+                    <FaFlask className="text-white text-lg" />
+                  </div>
+                </div>
+                <h3 className="font-medium text-gray-900 mb-4 text-lg">Research Interests for Collaboration</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start text-left">
+                    <span className="text-blue-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></span>
+                    <span className="text-gray-700">Audio AI and speech processing research</span>
+                  </div>
+                  <div className="flex items-start text-left">
+                    <span className="text-blue-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></span>
+                    <span className="text-gray-700">Conversational AI system architectures</span>
+                  </div>
+                  <div className="flex items-start text-left">
+                    <span className="text-blue-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></span>
+                    <span className="text-gray-700">Edge AI optimization and democratization</span>
+                  </div>
+                  <div className="flex items-start text-left">
+                    <span className="text-blue-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></span>
+                    <span className="text-gray-700">Multilingual AI for underrepresented languages</span>
+                  </div>
+                  <div className="flex items-start text-left">
+                    <span className="text-blue-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-blue-600 flex-shrink-0"></span>
+                    <span className="text-gray-700">Ethical AI development and deployment</span>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-white rounded-lg p-6 border border-gray-200 hover:shadow-md transition-all duration-300">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-gray-600 rounded-full flex items-center justify-center">
+                    <FaHandshake className="text-white text-lg" />
+                  </div>
+                </div>
+                <h3 className="font-medium text-gray-900 mb-4 text-lg">Open to</h3>
+                <div className="space-y-3">
+                  <div className="flex items-start text-left">
+                    <span className="text-gray-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-gray-600 flex-shrink-0"></span>
+                    <span className="text-gray-700">Research collaborations and joint publications</span>
+                  </div>
+                  <div className="flex items-start text-left">
+                    <span className="text-gray-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-gray-600 flex-shrink-0"></span>
+                    <span className="text-gray-700">PhD program discussions and applications</span>
+                  </div>
+                  <div className="flex items-start text-left">
+                    <span className="text-gray-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-gray-600 flex-shrink-0"></span>
+                    <span className="text-gray-700">Speaking at conferences and workshops</span>
+                  </div>
+                  <div className="flex items-start text-left">
+                    <span className="text-gray-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-gray-600 flex-shrink-0"></span>
+                    <span className="text-gray-700">Mentorship and knowledge sharing</span>
+                  </div>
+                  <div className="flex items-start text-left">
+                    <span className="text-gray-600 mr-3 mt-1.5 w-2 h-2 rounded-full bg-gray-600 flex-shrink-0"></span>
+                    <span className="text-gray-700">Open source project contributions</span>
+                  </div>
+                </div>
+              </div>
             </div>
             
-            <div>
-              <h3 className="font-medium text-gray-900 mb-3">Open to:</h3>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>• Research collaborations and joint publications</li>
-                <li>• PhD program discussions and applications</li>
-                <li>• Speaking at conferences and workshops</li>
-                <li>• Mentorship and knowledge sharing</li>
-                <li>• Open source project contributions</li>
-              </ul>
+            <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="mailto:maroa@vociply.com" 
+                className="inline-flex items-center justify-center px-8 py-3 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 transition-colors duration-300"
+              >
+                <FaEnvelope className="mr-2" />
+                Get in Touch
+              </a>
+              <a 
+                href="/contact" 
+                className="inline-flex items-center justify-center px-8 py-3 bg-white text-blue-600 font-medium rounded-lg border border-gray-300 hover:bg-gray-50 transition-colors duration-300"
+              >
+                <FaEye className="mr-2" />
+                View Full Contact Info
+              </a>
             </div>
           </div>
         </section>

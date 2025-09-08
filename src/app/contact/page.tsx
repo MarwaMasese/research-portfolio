@@ -2,28 +2,23 @@ export default function Alternate() {
   const contactMethods = [
     {
       type: "Professional Email",
-      value: "cornelius@vociply.com",
+      value: "maroa@vociply.com",
       description: "Best for research collaborations and professional inquiries"
     },
     {
       type: "LinkedIn",
-      value: "linkedin.com/in/cornelius-maroa",
+      value: "linkedin.com/in/marwamasese",
       description: "Professional network and career updates"
     },
     {
       type: "GitHub",
-      value: "github.com/cornelius-maroa",
+      value: "github.com/MarwaMasese",
       description: "Open source projects and code repositories"
     },
     {
       type: "Google Scholar",
-      value: "scholar.google.com/cornelius-maroa",
+      value: "scholar.google.com/marwamasese",
       description: "Academic publications and citation metrics"
-    },
-    {
-      type: "Research Gate",
-      value: "researchgate.net/cornelius-maroa",
-      description: "Academic profile and research network"
     }
   ];
 
