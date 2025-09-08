@@ -1,3 +1,6 @@
+import Image from 'next/image'
+import { FaMusic, FaRobot, FaBolt, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa'
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
@@ -7,10 +10,13 @@ export default function Home() {
           <div className="lg:col-span-1">
             <div className="sticky top-8">
               <div className="w-48 h-48 mx-auto bg-gray-200 rounded-full mb-6 flex items-center justify-center overflow-hidden">
-                <div className="text-gray-500 text-center">
-                  <div className="text-4xl mb-2">👨‍�</div>
-                  <div className="text-sm">Profile Photo</div>
-                </div>
+                <Image 
+                  src="/profile.jpg" 
+                  alt="Cornelius Maroa" 
+                  width={192} 
+                  height={192}
+                  className="rounded-full object-cover w-full h-full"
+                />
               </div>
               <div className="text-center space-y-4">
                 <h1 className="text-2xl font-light text-gray-900">Cornelius Maroa</h1>
@@ -20,9 +26,15 @@ export default function Home() {
                   <p>cornelius@vociply.com</p>
                 </div>
                 <div className="flex justify-center space-x-3 pt-4">
-                  <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">LinkedIn</a>
-                  <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">GitHub</a>
-                  <a href="#" className="text-blue-600 hover:text-blue-800 text-sm">Scholar</a>
+                  <a href="https://linkedin.com/in/cornelius-maroa" className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1">
+                    <FaLinkedin /> LinkedIn
+                  </a>
+                  <a href="https://github.com/cornelius-maroa" className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1">
+                    <FaGithub /> GitHub
+                  </a>
+                  <a href="mailto:cornelius@vociply.com" className="text-blue-600 hover:text-blue-800 text-sm flex items-center gap-1">
+                    <FaEnvelope /> Email
+                  </a>
                 </div>
               </div>
             </div>
@@ -54,7 +66,7 @@ export default function Home() {
               <div className="space-y-10">
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center">
-                    <span className="text-2xl mr-3">🎵</span> Audio AI Models
+                    <FaMusic className="text-2xl mr-3 text-blue-600" /> Audio AI Models
                   </h3>
                   <p className="text-gray-700 mb-4 leading-relaxed">
                     Developing deep learning architectures that understand and generate human speech across multiple 
@@ -73,7 +85,7 @@ export default function Home() {
 
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center">
-                    <span className="text-2xl mr-3">🤖</span> Conversational AI
+                    <FaRobot className="text-2xl mr-3 text-blue-600" /> Conversational AI
                   </h3>
                   <p className="text-gray-700 mb-4 leading-relaxed">
                     Exploring the intersection of large language models and voice interfaces to create more natural, 
@@ -92,7 +104,7 @@ export default function Home() {
 
                 <div className="bg-gray-50 p-6 rounded-lg">
                   <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center">
-                    <span className="text-2xl mr-3">⚡</span> Edge AI Optimization
+                    <FaBolt className="text-2xl mr-3 text-blue-600" /> Edge AI Optimization
                   </h3>
                   <p className="text-gray-700 mb-4 leading-relaxed">
                     Researching efficient neural network architectures that bring advanced AI capabilities to 

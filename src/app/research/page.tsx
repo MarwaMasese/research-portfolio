@@ -1,9 +1,13 @@
+import { FaRocket, FaBrain, FaGlobe, FaExternalLinkAlt, FaFilePdf, FaTools, FaFileAlt, FaLink } from 'react-icons/fa'
+
 export default function Research() {
   const featuredProjects = [
     {
       title: "Vociply: Real-Time Voice AI System",
       status: "Active Research & Development",
       publication: "Deep Learning Indaba 2025",
+      paperLink: "https://openreview.net/forum?id=RiJUdKWD3u&noteId=RiJUdKWD3u",
+      conferenceLink: "https://deeplearningindaba.com/2025/",
       description: "A groundbreaking voice-to-voice agentic system that combines large language models with real-time speech processing to automate business conversations in multiple African languages.",
       contributions: [
         "Novel architecture bridging LLMs with speech processing",
@@ -22,6 +26,7 @@ export default function Research() {
       title: "Hypernetwork Optimization Framework",
       status: "Research Draft",
       publication: "Target: Top-tier AI Conference",
+      paperLink: null, // Still in draft
       description: "Investigating how hypernetworks can optimize ternary neural networks for efficient edge AI deployment, addressing the critical need for AI democratization in resource-constrained environments.",
       contributions: [
         "Can hypernetworks improve ternary network training efficiency?",
@@ -48,20 +53,37 @@ export default function Research() {
     }
   ];
 
+  const conferences = [
+    {
+      name: "Deep Learning Indaba 2025",
+      url: "https://deeplearningindaba.com/2025/",
+      location: "Africa",
+      year: "2025"
+    },
+    {
+      name: "AMLD Africa 2024",
+      url: "https://appliedmldays.org/events/amld-africa-2024",
+      location: "USIU Kenya",
+      year: "2024"
+    }
+  ];
+
   const publications = [
     {
       year: "2025",
       title: "Vociply: A Real-Time Voice-to-Voice Agentic System for African Business Automation Using LLMs",
       authors: "Maroa, C. et al.",
       venue: "Deep Learning Indaba 2025",
-      status: "Accepted"
+      status: "Accepted",
+      paperLink: "https://openreview.net/forum?id=RiJUdKWD3u&noteId=RiJUdKWD3u"
     },
     {
       year: "In Progress",
       title: "Hypernetwork Optimization of Ternary Neural Networks for Edge AI Deployment",
       authors: "Maroa, C. et al.",
       venue: "Research Draft",
-      status: ""
+      status: "Draft",
+      paperLink: null
     }
   ];
 
@@ -105,7 +127,9 @@ export default function Research() {
               <div key={index} className="bg-gray-50 border rounded-lg p-8">
                 <div className="flex items-start justify-between mb-4">
                   <h3 className="text-2xl font-medium text-gray-900 flex items-center">
-                    <span className="mr-3">🚀</span>
+                    {index === 0 ? <FaRocket className="mr-3 text-blue-600" /> : 
+                     index === 1 ? <FaBrain className="mr-3 text-green-600" /> : 
+                     <FaGlobe className="mr-3 text-purple-600" />}
                     {project.title}
                   </h3>
                   <div className="text-right text-sm">
@@ -117,6 +141,31 @@ export default function Research() {
                 <p className="text-gray-700 mb-6 leading-relaxed text-lg">
                   {project.description}
                 </p>
+
+                {(project.paperLink || project.conferenceLink) && (
+                  <div className="mb-6 flex gap-4 flex-wrap">
+                    {project.paperLink && (
+                      <a 
+                        href={project.paperLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors"
+                      >
+                        <FaFilePdf /> Paper
+                      </a>
+                    )}
+                    {project.conferenceLink && (
+                      <a 
+                        href={project.conferenceLink} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+                      >
+                        <FaExternalLinkAlt /> Conference
+                      </a>
+                    )}
+                  </div>
+                )}
 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
@@ -144,6 +193,28 @@ export default function Research() {
           </div>
         </section>
 
+        {/* Conferences */}
+        <section className="mb-16">
+          <h2 className="text-2xl font-light text-gray-900 mb-8 border-b border-gray-200 pb-2">Conference Participation</h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            {conferences.map((conf, index) => (
+              <div key={index} className="bg-white border rounded-lg p-6 shadow-sm">
+                <h3 className="text-lg font-medium text-gray-900 mb-2">
+                  <a 
+                    href={conf.url} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:text-blue-800 flex items-center gap-2"
+                  >
+                    {conf.name} <FaExternalLinkAlt className="text-sm" />
+                  </a>
+                </h3>
+                <p className="text-gray-600 text-sm">{conf.location} • {conf.year}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
         {/* Publications */}
         <section className="mb-16">
           <h2 className="text-2xl font-light text-gray-900 mb-8 border-b border-gray-200 pb-2">Publications & Academic Output</h2>
@@ -155,7 +226,19 @@ export default function Research() {
                   <div className="text-sm text-gray-500">{pub.year}</div>
                 </div>
                 <p className="text-gray-600 mb-1">{pub.authors}</p>
-                <p className="text-blue-600 text-sm">{pub.venue} {pub.status && `[${pub.status}]`}</p>
+                <div className="flex items-center gap-4">
+                  <p className="text-blue-600 text-sm">{pub.venue} {pub.status && `[${pub.status}]`}</p>
+                  {pub.paperLink && (
+                    <a 
+                      href={pub.paperLink} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-1 text-blue-600 hover:text-blue-800 text-sm"
+                    >
+                      <FaExternalLinkAlt /> View Paper
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
@@ -178,7 +261,7 @@ export default function Research() {
             {openSource.map((project, index) => (
               <div key={index} className="bg-white border rounded-lg p-6 shadow-sm">
                 <h3 className="text-xl font-medium text-gray-900 mb-2 flex items-center">
-                  <span className="mr-2">🛠️</span>
+                  {index === 0 ? <FaTools className="mr-2 text-blue-600" /> : <FaFileAlt className="mr-2 text-green-600" />}
                   {project.title}
                 </h3>
                 <div className="text-sm text-gray-500 mb-4">
