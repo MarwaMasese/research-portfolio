@@ -14,8 +14,11 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Benedict Quartey - Portfolio",
-  description: "PhD Student in Computer Science at Brown University",
+  title: "Cornelius Maroa Portfolio",
+  description: "AI Researcher & CTO specializing in Audio AI and Conversational Systems",
+  icons: {
+    icon: "/profile.jpg",
+  },
 };
 
 export default function RootLayout({
