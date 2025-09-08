@@ -1,4 +1,4 @@
-import { FaRocket, FaBrain, FaGlobe, FaExternalLinkAlt, FaFilePdf, FaTools, FaFileAlt, FaLink } from 'react-icons/fa'
+import { FaRocket, FaBrain, FaGlobe, FaExternalLinkAlt, FaFilePdf, FaTools, FaFileAlt } from 'react-icons/fa'
 
 export default function Research() {
   const featuredProjects = [

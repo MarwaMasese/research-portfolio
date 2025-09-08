@@ -47,9 +47,9 @@ export default function Home() {
               <h2 className="text-3xl font-light text-gray-900 mb-8 border-b border-gray-200 pb-3">About Me</h2>
               <div className="prose prose-lg text-gray-700 leading-relaxed max-w-none">
                 <p className="mb-6 text-lg">
-                  I'm an aspiring AI researcher passionate about advancing <strong>Audio AI</strong> and{' '}
+                  I&apos;m an aspiring AI researcher passionate about advancing <strong>Audio AI</strong> and{' '}
                   <strong>Conversational Systems</strong> with a focus on multilingual applications and edge deployment. 
-                  With 5 years of industry experience bridging research and production, I'm dedicated to developing 
+                  With 5 years of industry experience bridging research and production, I&apos;m dedicated to developing 
                   AI technologies that create meaningful impact, particularly for underserved communities and 
                   low-resource languages.
                 </p>
@@ -126,8 +126,8 @@ export default function Home() {
             {/* Quote Section */}
             <section className="bg-blue-50 p-8 rounded-lg border-l-4 border-blue-200">
               <blockquote className="text-lg italic text-gray-700 text-center">
-                "Building bridges between cutting-edge AI research and meaningful real-world applications, 
-                with a commitment to democratizing access to advanced AI technologies."
+                &quot;Building bridges between cutting-edge AI research and meaningful real-world applications, 
+                with a commitment to democratizing access to advanced AI technologies.&quot;
               </blockquote>
             </section>
           </div>

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 export default function Alternate() {
   const contactMethods = [
     {
@@ -79,7 +81,7 @@ export default function Alternate() {
         <div className="text-center mb-12">
           <h1 className="text-4xl font-light text-gray-900 mb-4">Get in Touch</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            I'm always excited to discuss AI research, collaboration opportunities, 
+            I&apos;m always excited to discuss AI research, collaboration opportunities, 
             and the future of technology that makes a meaningful impact.
           </p>
         </div>
@@ -140,8 +142,8 @@ export default function Alternate() {
         <section className="text-center bg-gray-900 rounded-lg p-8">
           <h2 className="text-2xl font-light mb-4" style={{color: '#ffffff'}}>Ready to Collaborate?</h2>
           <p className="text-lg mb-6" style={{color: '#ffffff'}}>
-            Whether you're looking to discuss research opportunities, explore potential collaborations, 
-            or simply connect about AI and its impact, I'd love to hear from you.
+            Whether you&apos;re looking to discuss research opportunities, explore potential collaborations, 
+            or simply connect about AI and its impact, I&apos;d love to hear from you.
           </p>
           <div className="space-x-4">
             <a 
@@ -150,12 +152,12 @@ export default function Alternate() {
             >
               Send Email
             </a>
-            <a 
+            <Link 
               href="/" 
               className="inline-block border-2 border-white text-white px-6 py-3 rounded-lg hover:bg-white hover:text-gray-800 transition-colors font-medium"
             >
               Back to Portfolio
-            </a>
+            </Link>
           </div>
         </section>
       </div>

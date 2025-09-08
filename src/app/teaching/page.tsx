@@ -152,14 +152,14 @@ export default function Teaching() {
         {/* Contact & Connect */}
         <section className="bg-gray-50 rounded-lg p-10 text-center">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-light text-gray-900 mb-4">Let's Connect</h2>
+            <h2 className="text-3xl font-light text-gray-900 mb-4">Let&apos;s Connect</h2>
             <div className="w-24 h-1 bg-gray-300 mx-auto mb-6 rounded-full"></div>
             
             <p className="text-lg text-gray-700 mb-8 max-w-3xl mx-auto leading-relaxed">
-              I'm always excited to discuss research opportunities, collaborations, and the future of AI technology. 
-              Whether you're interested in <span className="font-medium text-gray-800">multilingual AI systems</span>, 
+              I&apos;m always excited to discuss research opportunities, collaborations, and the future of AI technology. 
+              Whether you&apos;re interested in <span className="font-medium text-gray-800">multilingual AI systems</span>, 
               <span className="font-medium text-gray-800"> edge deployment optimization</span>, or the intersection 
-              of research and real-world impact, I'd love to connect.
+              of research and real-world impact, I&apos;d love to connect.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mt-10">
