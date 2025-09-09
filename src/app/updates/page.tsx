@@ -105,28 +105,28 @@ export default function Updates() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-6xl mx-auto px-6 py-16">
-        <h1 className="text-4xl font-light text-gray-900 mb-12 text-center">Professional Journey</h1>
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
+        <h1 className="text-2xl sm:text-3xl lg:text-4xl font-light text-gray-900 mb-8 sm:mb-12 text-center">Professional Journey</h1>
         
         {/* Industry & Research Experience */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-light text-gray-900 mb-8 border-b border-gray-200 pb-2">Industry & Research Experience</h2>
-          <div className="space-y-8">
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-light text-gray-900 mb-6 sm:mb-8 border-b border-gray-200 pb-2">Industry & Research Experience</h2>
+          <div className="space-y-6 sm:space-y-8">
             {experiences.map((exp, index) => (
-              <div key={index} className="bg-gray-50 border-l-4 border-blue-200 rounded-lg p-6">
-                <div className="flex items-start justify-between mb-4">
-                  <div>
-                    <h3 className="text-xl font-medium text-gray-900">{exp.role}</h3>
-                    <p className="text-lg text-blue-600 font-medium">{exp.company}</p>
-                    <p className="text-sm text-gray-500 italic">{exp.type}</p>
+              <div key={index} className="bg-gray-50 border-l-4 border-blue-200 rounded-lg p-4 sm:p-6 hover:shadow-md transition-shadow">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4 gap-2 sm:gap-4">
+                  <div className="flex-1">
+                    <h3 className="text-lg sm:text-xl font-medium text-gray-900">{exp.role}</h3>
+                    <p className="text-base sm:text-lg text-blue-600 font-medium">{exp.company}</p>
+                    <p className="text-xs sm:text-sm text-gray-500 italic">{exp.type}</p>
                   </div>
-                  <div className="text-right">
-                    <span className="text-sm text-gray-600 font-mono bg-gray-200 px-2 py-1 rounded">
+                  <div className="sm:text-right">
+                    <span className="text-xs sm:text-sm text-gray-600 font-mono bg-gray-200 px-2 py-1 rounded inline-block">
                       {exp.period}
                     </span>
                   </div>
                 </div>
-                <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <ul className="list-disc list-inside text-gray-700 space-y-1 sm:space-y-2 text-sm sm:text-base">
                   {exp.description.map((item, idx) => (
                     <li key={idx} className="leading-relaxed">{item}</li>
                   ))}
@@ -137,18 +137,18 @@ export default function Updates() {
         </section>
 
         {/* Key Milestones */}
-        <section className="mb-16">
-          <h2 className="text-2xl font-light text-gray-900 mb-8 border-b border-gray-200 pb-2">Key Milestones</h2>
-          <div className="space-y-6">
+        <section className="mb-12 sm:mb-16">
+          <h2 className="text-xl sm:text-2xl font-light text-gray-900 mb-6 sm:mb-8 border-b border-gray-200 pb-2">Key Milestones</h2>
+          <div className="space-y-4 sm:space-y-6">
             {milestones.map((milestone, index) => (
-              <div key={index} className="flex items-start gap-6">
-                <div className="w-20 flex-shrink-0">
-                  <span className="text-gray-600 font-mono text-sm bg-blue-50 px-2 py-1 rounded">
+              <div key={index} className="flex flex-col sm:flex-row sm:items-start gap-2 sm:gap-6">
+                <div className="w-full sm:w-20 sm:flex-shrink-0">
+                  <span className="text-gray-600 font-mono text-xs sm:text-sm bg-blue-50 px-2 py-1 rounded inline-block">
                     {milestone.date}
                   </span>
                 </div>
                 <div className="flex-1">
-                  <p className="text-gray-800 leading-relaxed">
+                  <p className="text-gray-800 leading-relaxed text-sm sm:text-base">
                     {milestone.title}
                     {milestone.highlight && (
                       <>
@@ -171,14 +171,14 @@ export default function Updates() {
 
         {/* Technical Expertise */}
         <section>
-          <h2 className="text-2xl font-light text-gray-900 mb-8 border-b border-gray-200 pb-2">Technical Expertise</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="bg-white border rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center">
-                <span className="text-2xl mr-3">🧠</span>
-                Core Research Skills
+          <h2 className="text-xl sm:text-2xl font-light text-gray-900 mb-6 sm:mb-8 border-b border-gray-200 pb-2">Technical Expertise</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+            <div className="bg-white border rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3 sm:mb-4 flex items-center">
+                <span className="text-xl sm:text-2xl mr-2 sm:mr-3">🧠</span>
+                <span>Core Research Skills</span>
               </h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <ul className="list-disc list-inside text-gray-700 space-y-1 sm:space-y-2 text-sm sm:text-base">
                 <li><strong>Deep Learning:</strong> PyTorch, TensorFlow, Hugging Face Transformers</li>
                 <li><strong>Audio Processing:</strong> Speech recognition, synthesis, real-time processing</li>
                 <li><strong>Large Language Models:</strong> Fine-tuning, optimization, deployment</li>
@@ -186,12 +186,12 @@ export default function Updates() {
               </ul>
             </div>
 
-            <div className="bg-white border rounded-lg p-6 shadow-sm">
-              <h3 className="text-xl font-medium text-gray-900 mb-4 flex items-center">
-                <span className="text-2xl mr-3">⚙️</span>
-                Engineering & Deployment
+            <div className="bg-white border rounded-lg p-4 sm:p-6 shadow-sm hover:shadow-md transition-shadow">
+              <h3 className="text-lg sm:text-xl font-medium text-gray-900 mb-3 sm:mb-4 flex items-center">
+                <span className="text-xl sm:text-2xl mr-2 sm:mr-3">⚙️</span>
+                <span>Engineering & Deployment</span>
               </h3>
-              <ul className="list-disc list-inside text-gray-700 space-y-2">
+              <ul className="list-disc list-inside text-gray-700 space-y-1 sm:space-y-2 text-sm sm:text-base">
                 <li><strong>Cloud Platforms:</strong> AWS (SageMaker, Lambda), Google Cloud</li>
                 <li><strong>DevOps:</strong> Docker, Kubernetes, CI/CD pipelines</li>
                 <li><strong>Production Systems:</strong> FastAPI, scalable ML infrastructure</li>

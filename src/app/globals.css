@@ -143,18 +143,32 @@ nav a:hover::after {
 @media (max-width: 768px) {
   body {
     font-size: 15px;
+    line-height: 1.6;
   }
   
   h1 {
-    font-size: 2rem;
+    font-size: 1.75rem;
   }
   
   h2 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
   }
   
   .prose {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+  
+  /* Better spacing on mobile */
+  .space-y-16 > * + * {
+    margin-top: 3rem;
+  }
+  
+  .space-y-12 > * + * {
+    margin-top: 2.5rem;
   }
 }
 
