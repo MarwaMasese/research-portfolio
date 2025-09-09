@@ -11,7 +11,7 @@ export default function Home() {
             <div className="lg:sticky lg:top-24">
               <div className="w-32 h-32 sm:w-40 sm:h-40 lg:w-48 lg:h-48 mx-auto bg-gray-200 rounded-full mb-6 flex items-center justify-center overflow-hidden">
                 <Image 
-                  src="/research-portfolio/profile.jpg" 
+                  src="/profile.jpg" 
                   alt="Cornelius Maroa" 
                   width={192} 
                   height={192}
