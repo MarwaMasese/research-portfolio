@@ -19,7 +19,6 @@ export const metadata: Metadata = {
   icons: {
     icon: "/profile.jpg",
   },
-  metadataBase: new URL("https://marwamasese.github.io/research-portfolio"),
 };
 
 export default function RootLayout({
